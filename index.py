@@ -6,8 +6,8 @@ import requests
 import json
 import pusher
 from werkzeug.utils import secure_filename
-from trim import song
-from therapy import find
+from songs.trim import song
+from Therapists.therapy import find
 from sendemail import sendmail
 from video_emotion import output
 import cv2
@@ -45,19 +45,19 @@ def extras():
 def predict2():
 
     global lol
-    file_path = "D:\Downloads\screenshot.jpg"
+    file_path = "C:/Users/user/Downloads/screenshot.jpg"
     fin, mood = output(file_path)
 
     os.remove(file_path)
     # cv2.imshow("image", fin)
     # cv2.waitKey(0)
-    new_path = "D:\Projects\djhack\static\saves2\zinished{}.jpg".format(
+    new_path = "C:/Users/user/BARDOS-Chatbot/static/saves2/zinished{}.jpg".format(
         str(lol))
     cv2.imwrite(new_path, fin)
 
     lol = lol+1
     time.sleep(1)
-    return render_template("something.html", image_name="static\saves2\zinished" + str(lol-1) + ".jpg")
+    return render_template("something.html", image_name="static/saves2zinished" + str(lol-1) + ".jpg")
 
 
 def intensity(level):
@@ -78,36 +78,44 @@ def score_inc(num):
 def webhook():
     flag = 0
     data = request.get_json(silent=True)
+    print(data)
     score = 0
-    if data['queryResult']['intent']['displayName'] == 'feel_happy':
-        reply = {
-            'fulfillmentText': 'happy works!',
-        }
-        return jsonify(reply)
+    if data['queryResult']['intent']['displayName'] == 'MoodDetails':
+        if data['queryResult']['parameters']['mood'] == 'Happy':
+            reply = {
+                'fulfillmentText': 'happy works!',
+            }
+            return jsonify(reply)
 
-    if data['queryResult']['intent']['displayName'] == 'show_song':
-        rec_song = song()
-        my_string = "{} by {}"
-        my_string = my_string.format(
-            rec_song['song'][0], rec_song['artist'][0])
-        reply = {
-            'fulfillmentText': "According to your mood: " + my_string,
-        }
-        return jsonify(reply)
-
-    if data['queryResult']['intent']['displayName'] == 'doctor_rec':
-        city = data['queryResult']['parameters']['geo-city']
-        doctors = find(city)
-        fin = ""
-        for i in range(2):
-            my_string = "Doctor {}: \nName: {} Role: {} Contact: {}\n"
+    if data['queryResult']['intent']['displayName'] == 'MoodDetails':
+        if data['queryResult']['parameters']['mood'] == 'Sad':
+            rec_song = song()
+            my_string = "{} by {}"
             my_string = my_string.format(
-                i+1, doctors[i]['Name'], doctors[i]['Role'], doctors[i]['Contact'], )
-            fin += my_string
+                rec_song['song'][0], rec_song['artist'][0])
+            reply = {
+                'fulfillmentText': "According to your mood: " + my_string,
+            }
+            return jsonify(reply)
 
-        reply = {
-            'fulfillmentText': "Following are the doctor recommendations:\n" + fin
-        }
+    if data['queryResult']['intent']['displayName'] == 'DoctorRecommendation':
+        if len(data['queryResult']['parameters']['geo-city']) != 0:
+            city = data['queryResult']['parameters']['geo-city']
+            doctors = find(city)
+            fin = ""
+            for i in range(2):
+                my_string = "Doctor {}: \nName: {} Role: {} Contact: {}\n"
+                my_string = my_string.format(
+                    i+1, doctors[i]['Name'], doctors[i]['Role'], doctors[i]['Contact'], )
+                fin += my_string
+
+            reply = {
+                'fulfillmentText': "Following are the doctor recommendations:\n" + fin
+            }
+        else:
+            reply = {
+                'fulfillmentText': "Sure, Which city are you from?"
+            }
         return jsonify(reply)
 
     if data['queryResult']['intent']['displayName'] == 'Email':
@@ -196,3 +204,4 @@ def contact():
 # run Flask app
 if __name__ == "__main__":
     app.run()
+

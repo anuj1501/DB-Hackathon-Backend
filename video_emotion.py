@@ -37,6 +37,9 @@ def output(img):
     face_detection = cv2.CascadeClassifier(detection_model_path)
     faces = face_detection.detectMultiScale(
         gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30), flags=cv2.CASCADE_SCALE_IMAGE)
+    print(faces)
+    print(label)
+    
     faces = sorted(faces, reverse=True, key=lambda x: (
         x[2] - x[0]) * (x[3] - x[1]))[0]
     (x, y, w, h) = faces

@@ -1,6 +1,6 @@
 import pandas as pd
 def find(city):
-    df = pd.read_csv('D:\Projects\djhack\Therapists\Therapists-{}.csv'.format(city))
+    df = pd.read_csv('C:/Users/user/BARDOS-Chatbot/Therapists/Therapists-{}.csv'.format(city))
     s=df.sample(3,axis=1)
     s=[s.columns.values.tolist()]+s.values.tolist()
     l=[]

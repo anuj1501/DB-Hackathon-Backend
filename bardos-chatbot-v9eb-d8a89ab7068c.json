@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bardos-chatbot-v9eb",
+  "private_key_id": "d8a89ab7068c11b54949035e4390ebf8a2e393de",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCMGPTWhRUDL3AD\nrsTgwZgVbYeEqepH0Yhw9LqOQ6wZ+d5hyNAFuWsryZyPvSX59O2NgMDte+MNwUxA\nClsbVJlf0OsYorE2GU2lbZKamA08RrK8P0oPtirrGP4Jg0xu1NsV3E8AW2p3cCzi\nPCMtAVCRVKWtIHdSgpRPZgYaJKM/j+qeOeOkrL56SeL94MydQkLL5uZs/xvP+odl\nvp5148+HiU5ii7vjVNyiiNv+9H8Onzgq9JHO8n6GQNhX+33rWHEjlRUFlJdzMIol\naflbn+qcLLVpCZn9MpBGjK2VlAncT06/rYAut2gqxCFXUM0HPViWLrXhm1Dk/Jcs\nyAcn3BzBAgMBAAECggEAAJw42Ay+qge7RjVVFcVrG6QJVyzgLJeZV4Rd4gnx/F+a\n+hggTZeUg6V4VFUUntxz+tHn2Tr5At+7xMNEyQNY+w6VcRMvmFyzKppl7SzmkRu9\n2mGAUZ3jjUhLvjvtZbXRNdzSpmXHiplVRTehx7fP13+33GeJ5ITlh2xiYDuWz1N4\nCY4QJHn9vJMKejgh6apSbFveCufATtb0ZbS2ogWdZfw/J1sQtJt1DsQDXTAbIP22\nh92wC8A9zY7iv7LzVh1poT0heAvol8MsLlR2cdATM5TFVXFkB08q6lHboaO4PlT4\np6QrqGcaducHVNPEVJoBBQzphH8lWdRgWCDPOSgO4QKBgQDETLp9i8V7S1mKlMwU\nhFMD53n3BUwpeFYBHcR8d9wjOvJTbShyb+sdRlaiHgI6hnOzX/X/ouvtXnTOerh0\n4pesyC9jNbOA/kQz6vhagZyZnFdfNnGuRN6uTFL7uOZ+NSGNetPR/+Ldx0gtIgJM\nKnZfOLyHPi7blYZavccbFU0B4QKBgQC2tIAz3uLBbdsyX2XtN1q4/8vw7RUXiGvX\n8H+sBiizaVo9T9JDcGieZmri9r979en6l2cC/vUdn67XpziFxEqClr4mAlIDDQYr\ndhcjBLQ/Znt71qQqM9mbwqkpjh6r6yQDsngOdsk50GuEsIZFHvNPvhP9AWHHFCCU\nJRs62cg24QKBgAL3HcITwHHyW3HqeYK91Ps0HfWLUPE3biUqK/OtY9fsZgi4l2nT\nIvwYOerNBT+ZFFpbUr3/2gyF5sHPvMWXPq9PftfC0ela7fDS1dmYJ6NyZyd7DRCS\n3cJISOCglGrHprAacOS1NtoezopP/zTjV1Js6vwoBlEu2w632zAfjEBBAoGBAIe6\n+o8OYyjN4wy+AGvFNrm/FpQqnQO5jlyCx2ZVwQDgIHDyDsOZC6+5aGiqZMDDhQps\nVdPM8u4KBgshqIT/uVbgg+yaxrCLiWzaMwAJ65o6GTx7zcOod14WtDMx6KlRa5Tv\nje844e74XhfaSDWrc5hnHlRUJX6O/lDwbBVBW1MhAoGALNUSMCb2OgFGvSA3vliX\nM7pFmficgAwLqdqFyyxJk4pX3xlVch4U7L5RpguVQwQyi6Cz+GVzVK+/BsVPOZ2Y\nc9zwREEjBz9xhSj/rnASS25X4D9hdJZGZ4kkC+Q1y4j+ywVIVZysVaa8Zm6COOOq\nUClNKKshW1EmsN24OeZ9uGs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bardos-chatbot@bardos-chatbot-v9eb.iam.gserviceaccount.com",
+  "client_id": "115130412476412160655",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bardos-chatbot%40bardos-chatbot-v9eb.iam.gserviceaccount.com"
+}
